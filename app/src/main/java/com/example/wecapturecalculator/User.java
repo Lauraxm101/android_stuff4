@@ -22,6 +22,10 @@ public class User {
         return password;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail() {
         this.email = email;
     }
