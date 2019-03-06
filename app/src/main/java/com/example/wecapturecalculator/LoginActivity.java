@@ -32,5 +32,18 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(goToSearchActivity);
             }
         });
+
+        registration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User user = new User(username.getText().toString(), password.getText().toString());
+                Toast.makeText(LoginActivity.this,
+                        user.getUsername()+"\n"+user.getPassword(),
+                        Toast.LENGTH_SHORT).show();
+                //                                                  Is kur               I kur
+                Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);
+                startActivity(goToSearchActivity);
+            }
+        });
     }
 }
