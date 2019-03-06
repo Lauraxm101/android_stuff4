@@ -5,6 +5,6 @@
 <string name="username_hint">Prisijungimo vardas</string>
 <string name="password_hint">Slaptažodis</string>
 <string name="register_name">Registracija</string>
-<string name="email">El. paštas</string>
+<string name="email_hint">El. paštas</string>
 <string name="login_name">Prisijungimas</string>
 </resources>
