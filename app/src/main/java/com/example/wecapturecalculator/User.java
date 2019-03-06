@@ -3,6 +3,7 @@ package com.example.wecapturecalculator;
 public class User {
     private String username;
     private String password;
+    private String email;
 
     public User(String username, String password) {
         this.username = username;
@@ -19,6 +20,10 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setEmail() {
+        this.email = email;
     }
 
     public void setPassword(String password) {
