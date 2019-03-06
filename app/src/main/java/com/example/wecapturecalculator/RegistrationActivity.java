@@ -16,8 +16,9 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         final EditText username=findViewById(R.id.username);
-        final EditText password=findViewById(R.id.password);
         final EditText email=findViewById(R.id.email);
+        final EditText password=findViewById(R.id.password);
+
 
         Button registration=findViewById(R.id.registration);
 
