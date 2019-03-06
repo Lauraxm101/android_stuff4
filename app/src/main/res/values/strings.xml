@@ -1,6 +1,7 @@
 <resources>
 <string name="app_name">WeCapture calculator</string>
 <string name="app_title">WeCapture calculator</string>
+<string name="registration">Registracija</string>
 <string name="username_hint">Prisijungimo vardas</string>
 <string name="password_hint">Slaptažodis</string>
 <string name="register_name">Registracija</string>
