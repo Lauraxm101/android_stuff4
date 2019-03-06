@@ -7,7 +7,7 @@ public class NewUser {
 
     public NewUser(String username, String email, String password) {
         this.username = username;
-        this.username = email;
+        this.email = email;
         this.password = password;
     }
 
@@ -27,7 +27,7 @@ public class NewUser {
         return email;
     }
 
-    public void setEmail() {
+    public void setEmail(String email) {
         this.email = email;
     }
 
