@@ -24,9 +24,9 @@ public class RegistrationActivity extends AppCompatActivity {
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                User user = new User(username.getText().toString(), email.getText().toString(), password.getText().toString());
+                NewUser newuser = new NewUser(username.getText().toString(), email.getText().toString(), password.getText().toString());
                 Toast.makeText(RegistrationActivity.this,
-                        user.getUsername()+"\n"+user.getEmail()+"\n"+user.getPassword(),
+                        newuser.getUsername()+"\n"+newuser.getEmail()+"\n"+newuser.getPassword(),
                         Toast.LENGTH_SHORT).show();
                 //                                                  Is kur               I kur
                 Intent goToSearchActivity = new Intent(RegistrationActivity.this, SearchActivity.class);
