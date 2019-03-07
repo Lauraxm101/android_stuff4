@@ -7,5 +7,5 @@
 <string name="register_name">Registracija</string>
 <string name="email_hint">El. paštas</string>
 <string name="login_name">Prisijungimas</string>
-<string name="login_invalid_credentials">Blogai įvesti duomenys</string>
+<string name="login_invalid_credentials">Blogai įvestas prisijungimo vardas ir/arba slaptažodis</string>
 </resources>

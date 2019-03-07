@@ -3,7 +3,7 @@ package com.example.wecapturecalculator;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public static class Validation {
+public class Validation {
     private static final String CREDENTIALS_PATTERN = "^[a-zA-Z0-9]{3,20}$";
 
     public static boolean isValidCredentials(String credentials){
