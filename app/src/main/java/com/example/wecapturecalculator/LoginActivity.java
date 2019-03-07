@@ -24,9 +24,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 User user = new User(username.getText().toString(), password.getText().toString());
-                if (Validation.isValidCredentials()){
-
+                if (!Validation.isValidCredentials(user.getUsername()) && !Validation.isValidCredentials(user.getPassword())){
+                    Toast.makeText(LoginActivity.this,
+                            getResources().getString(R.string.login_invalid_credentials),
+                            Toast.LENGTH_SHORT).show();
                 }
+                else
+                    Toast.makeText(LoginActivity.this,
+                            getResources().getString(R.string.login_invalid_credentials),
+                            Toast.LENGTH_SHORT).show();
 
                 Toast.makeText(LoginActivity.this,
                         user.getUsername()+"\n"+user.getPassword(),
