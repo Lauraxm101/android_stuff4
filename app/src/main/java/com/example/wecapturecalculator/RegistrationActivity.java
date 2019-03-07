@@ -51,8 +51,8 @@ public class RegistrationActivity extends AppCompatActivity {
                                         newuser.getUsername() + "\n" + newuser.getEmail() + "\n" + newuser.getPassword(),
                                         Toast.LENGTH_SHORT).show();
                                 //                                                          Is kur               I kur
-                                Intent goToSearchActivity = new Intent(RegistrationActivity.this, SearchActivity.class);
-                                startActivity(goToSearchActivity);
+                                Intent goToLoginActivity = new Intent(RegistrationActivity.this, LoginActivity.class);
+                                startActivity(goToLoginActivity);
                                 }
                         }
                     }
