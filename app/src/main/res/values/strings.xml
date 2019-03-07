@@ -8,4 +8,7 @@
 <string name="email_hint">El. paštas</string>
 <string name="login_name">Prisijungimas</string>
 <string name="login_invalid_credentials">Blogai įvestas prisijungimo vardas ir/arba slaptažodis</string>
+<string name="invalid_username">Blogas prisijungimo vardo formatas</string>
+<string name="invalid_email">Blogas el. pašto formatas</string>
+<string name="invalid_password">Blogas slaptažodžio formatas</string>
 </resources>

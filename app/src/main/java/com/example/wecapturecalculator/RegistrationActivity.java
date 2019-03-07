@@ -28,22 +28,34 @@ public class RegistrationActivity extends AppCompatActivity {
                 NewUser newuser = new NewUser(username.getText().toString(), email.getText().toString(), password.getText().toString());
                 username.setError(null);
 
-                if (!Validation.isValidCredentialsEmail(newuser.getUsername()) || !Validation.isValidCredentialsEmail(newuser.getEmail()) || !Validation.isValidCredentialsEmail(newuser.getPassword())){
-                    username.setError(getResources().getString(R.string.login_invalid_credentials));
+                if (!Validation.isValidCredentials(newuser.getUsername()))
+                {
+                    username.setError(getResources().getString(R.string.invalid_username));
                     username.requestFocus();
                 }
                 else {
-                    Toast.makeText(RegistrationActivity.this,
-                            getResources().getString(R.string.login_invalid_credentials),
-                            Toast.LENGTH_SHORT).show();
+                    if (!Validation.isValidCredentialsEmail(newuser.getEmail()))
+                    {
+                            email.setError(getResources().getString(R.string.invalid_email));
+                            email.requestFocus();
+                    }
+                    else{
+                            if (!Validation.isValidCredentials(newuser.getPassword()))
+                            {
+                                password.setError(getResources().getString(R.string.invalid_password));
+                                password.requestFocus();
+                            }
+                            else{
 
-                    Toast.makeText(RegistrationActivity.this,
-                            newuser.getUsername() + "\n" + newuser.getEmail() + "\n" + newuser.getPassword(),
-                            Toast.LENGTH_SHORT).show();
-                    //                                                          Is kur               I kur
-                    Intent goToSearchActivity = new Intent(RegistrationActivity.this, SearchActivity.class);
-                    startActivity(goToSearchActivity);
-                }
+                                Toast.makeText(RegistrationActivity.this,
+                                        newuser.getUsername() + "\n" + newuser.getEmail() + "\n" + newuser.getPassword(),
+                                        Toast.LENGTH_SHORT).show();
+                                //                                                          Is kur               I kur
+                                Intent goToSearchActivity = new Intent(RegistrationActivity.this, SearchActivity.class);
+                                startActivity(goToSearchActivity);
+                                }
+                        }
+                    }
             }
         });
     }
