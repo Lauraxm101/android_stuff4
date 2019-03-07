@@ -26,12 +26,24 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NewUser newuser = new NewUser(username.getText().toString(), email.getText().toString(), password.getText().toString());
-                Toast.makeText(RegistrationActivity.this,
-                        newuser.getUsername()+"\n"+newuser.getEmail()+"\n"+newuser.getPassword(),
-                        Toast.LENGTH_SHORT).show();
-                //                                                          Is kur               I kur
-                Intent goToSearchActivity = new Intent(RegistrationActivity.this, SearchActivity.class);
-                startActivity(goToSearchActivity);
+                username.setError(null);
+
+                if (!Validation.isValidCredentialsEmail(newuser.getUsername()) || !Validation.isValidCredentialsEmail(newuser.getEmail()) || !Validation.isValidCredentialsEmail(newuser.getPassword())){
+                    username.setError(getResources().getString(R.string.login_invalid_credentials));
+                    username.requestFocus();
+                }
+                else {
+                    Toast.makeText(RegistrationActivity.this,
+                            getResources().getString(R.string.login_invalid_credentials),
+                            Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(RegistrationActivity.this,
+                            newuser.getUsername() + "\n" + newuser.getEmail() + "\n" + newuser.getPassword(),
+                            Toast.LENGTH_SHORT).show();
+                    //                                                          Is kur               I kur
+                    Intent goToSearchActivity = new Intent(RegistrationActivity.this, SearchActivity.class);
+                    startActivity(goToSearchActivity);
+                }
             }
         });
     }

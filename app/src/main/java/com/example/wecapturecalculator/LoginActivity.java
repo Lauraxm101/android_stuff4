@@ -29,17 +29,18 @@ public class LoginActivity extends AppCompatActivity {
                     username.setError(getResources().getString(R.string.login_invalid_credentials));
                     username.requestFocus();
                 }
-                else
+                else {
                     Toast.makeText(LoginActivity.this,
                             getResources().getString(R.string.login_invalid_credentials),
                             Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(LoginActivity.this,
-                        user.getUsername()+"\n"+user.getPassword(),
-                        Toast.LENGTH_SHORT).show();
-                //                                                  Is kur               I kur
-                Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);
-                startActivity(goToSearchActivity);
+                    Toast.makeText(LoginActivity.this,
+                            user.getUsername() + "\n" + user.getPassword(),
+                            Toast.LENGTH_SHORT).show();
+                    //                                                  Is kur               I kur
+                    Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);
+                    startActivity(goToSearchActivity);
+                }
             }
         });
 
